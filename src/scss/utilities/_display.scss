@@ -1,0 +1,6 @@
+$displays: block, inline-block, inline, flex, inline-flex, table, table-cell, table-row, none;
+@each $display in $displays {
+    .u-d-#{$display} {
+        display: $display !important;
+    }
+}

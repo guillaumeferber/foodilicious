@@ -7,6 +7,7 @@
     --color-primary: #40378A;
     --color-secondary: #D5E7FF;
     --color-tertiary: #F0F7FF;
+    --color-bg: #C6EBFF;
 
     // shades of grey
     --color-grey-1: #141414;
@@ -24,4 +25,12 @@
 
     // effects
     --default-border-radius: 1.6rem;
+
+    --padding-default: 1.5rem;
 }
+
+$breakpoint-xs: 30rem;
+$breakpoint-sm: 57.6rem;
+$breakpoint-md: 39.9375rem;
+$breakpoint-lg: 99.2rem;
+$breakpoint-xl: 120rem;

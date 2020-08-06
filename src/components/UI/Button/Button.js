@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import classes from './_Button.scss';
 class Button extends Component {
     render() {
         return (
             <button type="button"
-                disabled={props.disabled}
-                className={[classes.Button, classes[props.btnType]].join(' ')}
-                onClick={props.clicked}>{props.children}</button>
+                disabled={this.props.disabled}
+                className={[classes.Button, classes[this.props.type]].join(' ')}
+                onClick={this.props.clicked}>{this.props.children}</button>
          );
     }
 }

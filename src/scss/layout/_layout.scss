@@ -16,13 +16,16 @@ body {
     box-sizing: border-box;
     font-family: var(--font-family-sans-serif);
     font-size: var(--default-font-size);
-    background: var(--color-tertiary);
+    background: var(--color-bg);
 }
 
 main,
 .main {
-    margin: .5rem;
-    border: 5px solid var(--white);
+    margin: 2rem 4rem;
+    border: .5rem solid var(--white);
     border-radius: var(--default-border-radius);
+    background: var(--color-tertiary);
     padding: 3rem;
 }
+
+@import "grid";

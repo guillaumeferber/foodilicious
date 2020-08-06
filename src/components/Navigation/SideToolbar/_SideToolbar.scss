@@ -1,0 +1,11 @@
+.SideToolbar {
+    padding: 1rem;
+    background: khaki;
+    height: 100%;
+    nav {
+        height: 100%;
+    }
+    li {
+        transform: rotate(-90deg);
+    }
+}
