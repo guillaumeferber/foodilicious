@@ -7,7 +7,7 @@
     align-items: center;
     height: 100%;
     .SideToolbar & {
-        align-items: stretch;
+        align-items: center;
         flex-direction: column-reverse;
         text-align: center;
     }

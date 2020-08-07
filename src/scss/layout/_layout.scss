@@ -17,9 +17,9 @@ body {
     font-family: var(--font-family-sans-serif);
     font-size: var(--default-font-size);
     background: var(--color-bg);
+    color: var(--color-text);
 }
 
-main,
 .main {
     margin: 2rem 4rem;
     border: .5rem solid var(--white);

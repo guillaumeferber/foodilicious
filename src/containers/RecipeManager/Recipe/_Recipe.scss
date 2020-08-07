@@ -1,0 +1,16 @@
+.Recipe {
+    flex: 1 0 auto;
+    min-height: 50%;
+    min-width: 50%;
+    max-width: 80%;
+    padding: 3rem;
+    border: 3px solid var(--white);
+    border-radius: 1rem;
+    background: var(--color-tertiary);
+    box-shadow: 0 1px 1px 0 scale-color(#D5E7FF, $alpha: -20%),
+                    0 1px 5px 0 scale-color(#D5E7FF, $alpha: -35%);
+
+    & + & {
+        margin-left: 10rem;
+    }
+}

@@ -1,0 +1,60 @@
+.tile {
+    position: relative;
+    display: inline-block;
+    border-radius: 1rem;
+    transition: all .2s ease-out 0s;
+    max-height: 10rem;
+    min-width: 10rem;
+    min-height: 10rem;
+    box-sizing: border-box;
+    background: var(--color-tertiary);
+    padding: 0 2rem;
+    border: 3px solid var(--white);
+    box-shadow: 0 1px 1px 0 scale-color(#D5E7FF, $alpha: -20%),
+                    0 1px 5px 0 scale-color(#D5E7FF, $alpha: -35%);
+    &--rounded {
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        max-height: 8rem;
+        min-height: 8rem;
+        min-width: 8rem;
+        padding: 0;
+        main {
+            margin: 0 auto;
+            padding: 0;
+            height: 100%;
+        }
+    }
+
+    /*
+    * Card Content classes
+    */
+    header,
+    main,
+    footer {
+        text-align: center;
+        padding-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+
+    /*
+    * Card content detail classes
+    */
+    header {
+        padding-top: 1rem;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+
+    main {
+        font-weight: 500;
+        padding-bottom: .5rem;
+    }
+
+    footer {
+        font-weight: 300;
+        font-size: 1rem;
+    }
+}

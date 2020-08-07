@@ -1,0 +1,19 @@
+.RecipeIngredients {
+    max-width: 80%;
+    flex-wrap: wrap;
+    li {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        margin: 0 2rem 2rem 0;
+        font-size: 1.2rem;
+        div {
+            margin-left: 1rem;
+            color: var(--color-grey-4);
+            b {
+                color: var(--color-grey-3);
+
+            }
+        }
+    }
+}

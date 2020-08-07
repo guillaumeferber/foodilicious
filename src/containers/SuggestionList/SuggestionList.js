@@ -1,19 +1,55 @@
 import React, { Component } from 'react';
 import Aux from '../../hoc/Aux/Aux';
-import { Card } from '../../components';
-
+import { Card, Title } from '../../components';
 
 class SuggestionList extends Component {
     render() {
         return (
             <Aux>
+                <Title level="2" className="u-m-t-lg">More delicious <b>treats</b>...</Title>
                 <div className="SuggestionList">
-                    <Card size="medium" variant="primary">Card #1</Card>
-                    <Card size="medium" variant="primary">Card #2</Card>
-                    <Card size="medium" variant="primary">Card #3</Card>
-                    <Card size="medium" variant="primary">Card #4</Card>
-                    <Card size="medium" variant="primary">Card #5</Card>
-                    <Card size="medium" variant="primary">Card #6</Card>
+                    <Card className="card" size="medium" variant="primary">
+                        <header>
+                            <img src="" alt="" />
+                        </header>
+                        <main>Swedish deer</main>
+                        <footer>30mn Cooktime</footer>
+                    </Card>
+                    <Card className="card" size="medium" variant="primary">
+                        <header>
+                            <img src="" alt="" />
+                        </header>
+                        <main>Swedish deer</main>
+                        <footer>30mn Cooktime</footer>
+                    </Card>
+                    <Card className="card" size="medium" variant="primary">
+                        <header>
+                            <img src="" alt="" />
+                        </header>
+                        <main>Swedish deer</main>
+                        <footer>30mn Cooktime</footer>
+                    </Card>
+                    <Card className="card" size="medium" variant="primary">
+                        <header>
+                            <img src="" alt="" />
+                        </header>
+                        <main>Swedish deer</main>
+                        <footer>30mn Cooktime</footer>
+                    </Card>
+                    <Card className="card" size="medium" variant="primary">
+                        <header>
+                            <img src="" alt="" />
+                        </header>
+                        <main>Swedish deer</main>
+                        <footer>30mn Cooktime</footer>
+                    </Card>
+                    <Card className="card" size="medium" variant="primary">
+                        <header>
+                            <img src="" alt="" />
+                        </header>
+                        <main>Swedish deer</main>
+                        <footer>30mn Cooktime</footer>
+                    </Card>
                 </div>
             </Aux>
          );

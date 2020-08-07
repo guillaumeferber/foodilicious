@@ -6,6 +6,7 @@ export {default as Card} from './UI/Card/Card';
 export {default as Modal} from './UI/Modal/Modal';
 export {default as Spinner} from './UI/Spinner/Spinner';
 export {default as Title} from './UI/Title/Title';
+export {default as Tile} from './UI/Tile/Tile';
 
 // General components
 export {default as Toolbar} from './Navigation/Toolbar/Toolbar';

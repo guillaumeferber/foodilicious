@@ -5,42 +5,46 @@
 .card {
     position: relative;
     display: inline-block;
-    border-radius: 4px;
-    box-shadow: 0 1px 7px 0 rgba(0,0,0, .3);
+    border-radius: 1rem;
     transition: all .2s ease-out 0s;
-    margin-bottom: 40px;
+    max-height: 10rem;
+    margin-bottom: 4rem;
     box-sizing: border-box;
-}
+    background: var(--color-secondary);
+    border: 3px solid var(--white);
+    box-shadow: 0 1px 1px 0 scale-color(#D5E7FF, $alpha: -20%),
+                    0 1px 5px 0 scale-color(#D5E7FF, $alpha: -35%);
 
-.card:hover {
-    box-shadow: 0 3px 13px 0 rgba(0,0,0, .3);
-}
+    /*
+    * Card Content classes
+    */
+    header,
+    main,
+    footer {
+        padding: 1rem;
+        text-align: center;
+        padding-bottom: 1rem;
+        font-size: .65rem;
+    }
 
-/*
-* Card Content classes
-*/
-.card header,
-.card main,
-.card footer {
-    padding: 20px;
-}
+    /*
+    * Card content detail classes
+    */
+    header {
+        position: absolute;
+        top: -5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 700;
+    }
 
-/*
-* Card content detail classes
-*/
-.card header {
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-align: center;
-}
 
-.card footer {
-    border-top: 1px solid rgb(233, 233, 233);
-    font-size: .8rem;
-}
+    main {
+        padding-top: 4rem;
+        font-weight: 700;
+        font-size: 1rem;
+    }
 
-.card main {
-    font-size: .9rem;
 }
 
 .card__close {

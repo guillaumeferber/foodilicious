@@ -63,6 +63,7 @@ class Card extends Component {
           const _className = cx(
             className,
             styles[size],
+            styles[variant],
             styles.card,
             {
               [disabledClassName]: disabled
