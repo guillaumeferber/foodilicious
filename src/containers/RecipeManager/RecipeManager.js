@@ -2,25 +2,21 @@ import React, { Component } from 'react';
 import { SideToolbar, Toolbar } from '../../components';
 import SuggestionList from '../SuggestionList/SuggestionList';
 import Recipe from './Recipe/Recipe';
+import axios from '../../axios-api';
 import './_RecipeManager.scss';
 
 class RecipeManager extends Component {
     state = {
-        recipes: [
-            {
-                id: 0,
-                description: null,
-                ingredients: null,
-                nutrition: null
-            },
-            {
-                id: 1,
-                description: null,
-                ingredients: null,
-                nutrition: null
-            }
-        ]
+        recipes: []
     }
+
+    componentDidMount() {
+        axios.get(`random?apiKey=72425fcc0db44f0eaeacb881e0bc0546`)
+        .then(res => {
+            this.setState({recipes: res.data.recipes})
+        })
+    }
+
 
     renderRecipeList = () => {
         return this.state.recipes && this.state.recipes.map((recipe, idx) => {

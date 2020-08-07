@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styles from './Button.css';
+import './_Button.scss';
+
 import cx from 'classnames';
 class Button extends Component {
 
@@ -16,10 +17,10 @@ class Button extends Component {
     };
 
     static defaultProps = {
-        className: "",
+        className: "Button",
         label: "",
-        size: "",
-        variant: "",
+        size: "medium",
+        variant: "primary",
         disabled: false,
         disabledClassName: ""
     };
@@ -36,7 +37,13 @@ class Button extends Component {
         const { label, children } = this.props;
 
         if (label) { return label; }
-        if (children) { return children; }
+        if (children) {
+            return (
+                <div className="Button__body">
+                    {children}
+                </div>
+            )
+         }
 
         return "Button";
     }
@@ -52,16 +59,12 @@ class Button extends Component {
 
           const _classnames = cx(
             className,
-            styles[size],
-            styles[variant],
-            styles.Button,
+            size,
+            variant,
             {
               [disabledClassName]: disabled
             }
         );
-
-        console.log(styles);
-
 
         return (
             <button type="button"
