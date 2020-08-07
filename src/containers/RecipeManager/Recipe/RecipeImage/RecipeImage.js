@@ -27,7 +27,9 @@ class RecipeImage extends Component {
         if (label) { return label; }
         if (image) {
             return (
-                <div className={_classnames} ref={this.image}  style={{backgroundImage: `url(${image})`}}></div>
+                <div className="RecipeImage-wrap">
+                    <div className={_classnames} ref={this.image}  style={{backgroundImage: `url(${image})`}}></div>
+                </div>
             )
         }
 

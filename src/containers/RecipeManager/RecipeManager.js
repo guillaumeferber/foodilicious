@@ -4,6 +4,7 @@ import SuggestionList from '../SuggestionList/SuggestionList';
 import Recipe from './Recipe/Recipe';
 import axios from '../../axios-api';
 import './_RecipeManager.scss';
+import data from './recipe.json';
 
 class RecipeManager extends Component {
     state = {
@@ -11,10 +12,11 @@ class RecipeManager extends Component {
     }
 
     componentDidMount() {
-        axios.get(`random?apiKey=72425fcc0db44f0eaeacb881e0bc0546`)
-        .then(res => {
-            this.setState({recipes: res.data.recipes})
-        })
+        this.setState({recipes: data})
+        // axios.get(`random?number=2&apiKey=72425fcc0db44f0eaeacb881e0bc0546`)
+        // .then(res => {
+        //     this.setState({recipes: res.data.recipes})
+        // })
     }
 
 

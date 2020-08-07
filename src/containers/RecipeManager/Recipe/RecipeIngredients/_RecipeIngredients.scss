@@ -1,11 +1,12 @@
 .RecipeIngredients {
-    max-width: 80%;
+    max-width: 65%;
     flex-wrap: wrap;
     li {
+        width: 33%;
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
-        margin: 0 2rem 2rem 0;
+        margin: 0 0 3rem 0;
         font-size: 1.2rem;
         div {
             margin-left: 1rem;

@@ -8,16 +8,18 @@ import RecipeImage from './RecipeImage/RecipeImage';
 
 class Recipe extends Component {
 
+
     render() {
+        console.log(this.props.recipe)
         return (
             <Aux>
                 <div className="Recipe">
-                    <RecipeDescription description={this.props.recipe.description} />
-                    <RecipeIngredients ingredients={this.props.recipe.ingredients} />
+                    <RecipeDescription description={{title: this.props.recipe.title, summary: this.props.recipe.summary}} />
+                    <RecipeIngredients ingredients={this.props.recipe.extendedIngredients} />
                     <RecipeNutrition nutrition={this.props.recipe.nutrition} />
                     <RecipeCTA />
                     {/* <RecipeImage image={this.props.recipe.image} /> */}
-                    <RecipeImage image="http://lorempixel.com/output/food-h-c-798-804-9.jpg" />
+                    <RecipeImage image={this.props.recipe.image} />
 
                 </div>
             </Aux>
