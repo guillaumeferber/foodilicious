@@ -9,7 +9,7 @@ const sideToolbar = ( props ) => {
         <Aux>
             <div className="SideToolbar">
                 <nav>
-                    <NavigationItems type="main"/>
+                    <NavigationItems active={props.selected} type="main" clicked={(e) => props.clicked(e, 'type')}/>
                 </nav>
             </div>
         </Aux>

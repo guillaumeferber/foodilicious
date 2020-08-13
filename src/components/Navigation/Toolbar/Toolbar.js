@@ -5,7 +5,7 @@ import NavigationItems from '../NavigationItems/NavigationItems';
 const toolbar = ( props ) => (
     <header className="Toolbar">
         <nav className="DesktopOnly">
-            <NavigationItems type="filters"/>
+            <NavigationItems active={props.selected} type="filters" clicked={(e) => props.clicked(e, 'ingredient')}/>
         </nav>
     </header>
 );
