@@ -3,11 +3,11 @@
 * Main classes
 */
 .card {
-    position: relative;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     border-radius: 1rem;
     transition: all .2s ease-out 0s;
-    max-height: 10rem;
     margin-bottom: 4rem;
     box-sizing: border-box;
     background: var(--color-secondary);
@@ -15,16 +15,27 @@
     box-shadow: 0 1px 1px 0 scale-color(#D5E7FF, $alpha: -20%),
                     0 1px 5px 0 scale-color(#D5E7FF, $alpha: -35%);
     width: calc(100% / 6);
+    text-align: center;
+    min-height: 17rem;
 
+    img {
+        display: block;
+        position: relative;
+        width: 120px;
+        max-width: 100%;
+        left: 50%;
+
+        transform: translateX(-50%) translateY(-50%);
+        filter: drop-shadow(3px 4px 4px #{scale-color(#000, $lightness: 65%)});
+    }
     /*
     * Card Content classes
     */
     header,
     main,
     footer {
-        padding: 1rem;
+        flex: 1 0 auto;
         text-align: center;
-        padding-bottom: 1rem;
         font-size: .65rem;
     }
 
@@ -32,21 +43,19 @@
     * Card content detail classes
     */
     header {
-        position: absolute;
-        top: -5rem;
-        left: 50%;
-        transform: translateX(-50%);
         font-weight: 700;
-        padding-bottom: 2rem;
     }
 
-
     main {
-        padding-top: 1.5rem;
+        margin-top: -4.5rem;
+        padding: 1.5rem 1rem 1.5rem;
         font-weight: 700;
         font-size: 1rem;
     }
 
+    footer {
+        padding-bottom: 1rem;
+    }
 }
 
 .card__close {

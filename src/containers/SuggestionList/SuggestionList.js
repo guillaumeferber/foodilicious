@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Aux from '../../hoc/Aux/Aux';
 import { Card, Title } from '../../components';
+import image from '../../assets/images/meal.png';
 
 class SuggestionList extends Component {
 
@@ -14,7 +15,8 @@ class SuggestionList extends Component {
             return ( <h5>Sorry, no similar items have been found</h5> )
         }
         return this.props.similar.map((recipe, idx) =>  (
-            <Card className="card" size="medium" variant="primary" key={`${recipe.id}_${idx}`}>
+            <Card className="card" size="medium" variant="primary" key={`${recipe.id}_${idx}`} tabindex="0">
+                <img src={image} alt="Suggestion meal" role="banner"/>
                 <main>{this.renderTitle(recipe.title)}</main>
                 <footer>{recipe.readyInMinutes}mn Cooktime</footer>
             </Card>
@@ -25,7 +27,7 @@ class SuggestionList extends Component {
 
         return (
             <Aux>
-                <Title level="2" className="u-m-t-lg">More delicious <b>treats</b>...</Title>
+                <Title level="2" className="u-m-t-lg u-m-b-xl">More delicious <b>treats</b>...</Title>
                 <div className="SuggestionList">
                     {this.renderSimilarItems(this.props.similar)}
                 </div>
